@@ -1,0 +1,784 @@
+<!DOCTYPE HTML>
+<!--
+	Very cool website for TEDx 2021
+	It is cool because we made it
+ -->
+<html>
+<head>
+  <title>Our Event</title>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Organization",
+    "url": "http://www.tedxyouthdpsmis.com/",
+    "logo": "http://testing.tedxyouthdpsmis.com/images/TEDeX.png"
+  }
+  </script>
+
+   <meta charset="utf-8"/>
+  <link rel="shortcut icon" type="image/png" href="images/TEDeX.png"/>
+  <meta content="TEDxYouth@DPSMIS | Official website" property="og:title"/>
+  <meta content="The official website for TEDxYouth@DPSMIS Doha" property="og:description"/>
+  <meta name="title" content="TEDxYouth@DPSMIS | Official website">
+  <meta name="description" content="The official website for TEDxYouth@DPSMIS Doha 2021">
+  <meta content="http://www.tedxyouthdpsmis.com/" property="og:url"/>
+  <meta content="http://testing.tedxyouthdpsmis.com/images/TEDeX.png" property="og:image"/>
+  <meta content="#E62B1E" data-react-helmet="true" name="theme-color"/>
+  <meta name="keywords" content="tedx, dps mis, tedxyouth, qatar, dpsmis">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <link rel="stylesheet" href="assets/css/devices.min.css" type="text/css">
+
+  <style>
+  /* Phone stuff*/
+
+  @media screen and (min-width: 980px){
+      .spotlight:nth-child(3){
+        display: flex;
+        -moz-flex-direction: row-reverse;s-webkit-flex-direction: row-reverse;-ms-flex-direction: row-reverse;flex-direction: row-reverse;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+      }
+  }
+  @media screen and (max-width: 980px) {
+    .themestuff{
+      padding: 3em 0em 1em 2em !important;
+    }
+    .oediv{
+      padding: 60px 0 0 0 !important;
+      background: #000000;
+    }
+    #footer{
+      display: none !important;
+    }
+    .hideonphone{
+      display:none !important;
+    }
+    .hideonpc{
+      display:block;
+    }
+    .spotlight:nth-child(3) .spacingfix{
+      padding-bottom: 1em;
+    }
+    .fp-controlArrow.fp-prev{
+      left: 10px !important;
+      background-image: none !important;
+    }
+    .fp-controlArrow.fp-next{
+      right: 10px !important;
+      margin-top:-20px;
+    }
+    .hideonp{
+      display: flex !important;
+    }
+    .boxb{
+      display:none !important;
+    }
+
+    .imgleft{
+      float: none !important;
+      max-width: 100vw !important;
+      height: auto !important;
+      padding: 0 0 0 0 !important;
+    }
+    .fix1{
+      width: 100% !important;
+      display: flex !important;
+    }
+    .fix2{
+      width: 100% !important;
+      display: none !important;
+    }
+    .contright{
+      display: none !important;
+    }
+    .imgright{
+      display: none !important;
+    }
+
+    .haha{
+      display: none !important;
+    }
+    .hehe{
+      display: block !important;
+    }
+  }
+
+  #navbutton{
+    width: 50px !important;
+  }
+  #navbutton .toggle{
+    width: 50px !important;
+  }
+
+  .hideonphone{
+    display:block;
+  }
+
+  .hideonp{
+    display: none;
+  }
+
+  .hehe{
+    display: none;
+  }
+  .section{
+    text-align:center;
+  }
+
+  .fp-tableCell {
+    display: flex;
+    width: 100% !important;
+    height: 100% !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  p {
+    text-align: justify;
+    padding: 1.5em;
+    line-height: 1.4em !important;
+  }
+
+  .fp-controlArrow.fp-prev {
+    left: 50px;
+    border-color: transparent #333333 transparent transparent;
+    z-index: 1000;
+  }
+  .fp-controlArrow.fp-next{
+    right: 50px;
+    border-color: transparent transparent transparent #333333;
+    z-index: 1000;
+  }
+
+  .fp-controlArrow.fp-prev {
+    left: 50px;
+    height: 39px;
+    width:34px;
+    background-image: url("images/[L] black_button - Copy.png");
+    background-size: contain;
+    border-color: transparent;
+    border-width:0px;
+  }
+
+
+  .fp-controlArrow.fp-next     {
+    right: 50px;
+    height: 39px;
+    width:34px;
+    border-color: transparent;
+    border-width:0px;
+  }
+
+  .fp-controlArrow.fp-next{
+    background-image: url("images/[L] black_button.png");
+    background-size: cover;
+  }
+  .slide{
+    height: 66vh;
+  }
+
+  .slide h1{
+    font-size: 2em;
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+
+  .slide.other img{
+    top:50%;
+    padding: 1.5em;
+    width: min(75vw, 90vh);
+  }
+
+  .fp-slidesNav.fp-bottom{
+    bottom: 50px;
+  }
+
+  .phonemenu{
+    color: white;
+    width: 70vw;
+    font-size: 1.5em;
+    border:none;
+  }
+
+  .imgleft{
+    max-height: 66vh;
+    max-width: 50%;
+    float:left;
+    padding-left: 125px;
+    padding-right: 50px;
+  }
+  .imgright{
+    width:50%;
+    float:right;
+    height: 66vh;
+  }
+  .contright{
+    width:50%;
+    float:right;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 125px;
+    font-family: byesat;
+    text-align: justify;
+    font-size: 1em;
+    flex-direction: column;
+    margin-top: 1em;
+  }
+
+  #iphone{
+    background: #f8f8f8;
+  }
+
+  #mac{
+    background-image: url("images/[L] H-SA.jpg") ;
+  }
+
+  .fix1{
+    width:50vw;
+    float:left;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display:none;
+  }
+  .fix2{
+    width:50vw;
+    float:left;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .cool{
+    position: absolute;
+    top: -20vw;
+    left: -20vw;
+    width: min(110vw, 110vh);
+    height: min(110vw, 110vh);
+    border-radius: 50%;
+    background: #e62b1e;
+}
+
+  #fp-nav{
+    opacity: 0;
+  }
+
+  ul.icons{
+    margin: 0 0 1em 0;
+  }
+
+  .themestuff{
+    padding: 3em 5em 7em 0em;
+  }
+
+  .oediv{
+    padding: 60px 0 0 0;
+  }
+
+  </style>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FVXE2EYNDR"></script>
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FVXE2EYNDR');
+</script>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+
+</head>
+<body class="index is-preload">
+
+
+
+<div id="loader"></div>
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1 id="logo"><a href="index.html"><img src="images/[TEDx] BLACK TEXT.png" height="25vh"></a></h1>
+        <nav id="nav">
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li class="submenu">
+                    <a href="#">Register</a>
+                    <ul>
+                        <li><a href="https://forms.gle/9xFRbFbGHNoqmGNX9" target="_blank">Volunteer</a></li>
+                        <li><a href="https://forms.gle/diw2VHR2FpWCBKNh9" target="_blank">Speaker</a></li>
+                    </ul>
+                </li>
+                <li class="current"><a href="Our Event.html">Our Event</a></li>
+                <li class="current"><a href="About Us.html">About Us</a></li>
+                <li class="current"><a href="Legacy.html">Legacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section id="banner" style="background: #ffffff !important;padding:0">
+      <div class = "demo" style="width:100vw; height:100vh;">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/n4skOkIVa4E?autoplay=1&mute=1&muted=1" frameborder="0" allowfullscreen allow="autoplay" class="oediv"></iframe>
+      <a class="scrolly" href="#two"><span></span></a>
+    </div>
+    </section>
+    <section id="two" class="ali2 alt style2">
+        <section class="spotlight haha" style="background-image: url();background-color: white;color: black">
+          <img src="images/Still_frame.jpg" width="35%">
+
+            <div class="content" style="padding-top: 2em;padding-bottom: 2em;" id="TedX">
+              <!--16-10-21 end-->
+
+                <strong><span style=color:white>
+                  <div class="spacingfix">
+        <h1 class="roast">Logo</h1>
+        <p>You know someone whom we all could be jealous of? A newborn baby. Why, you may ask. Every newborn child is a clean slate. No problems, no mistakes, no regrets. But once they start growing up, the clean slate becomes marred with the permanent marks of failure, setbacks, and disappointment. But like it's said, every cloud has a silver lining. Every once in a while, as circumstances change, life provides us with a new slate, a new opportunity to learn from our previous mistakes and then make more mistakes. We fall, we overcome. So continues the cycle of life, making us wiser and more experienced, slate by slate.</p></strong></span>
+
+            </div>
+
+            </div>
+          </section>
+
+          <section class="hehe" style="color: white;background-image: url(images/xcurtain1.gif);background-repeat: no-repeat;background-position: center;height: 800px;">
+
+            <div class="conte" style="padding-top: 10em;background-color: rgba(0,0,0,0.5);padding-bottom: 30em; ">
+            <h1 class="roast" >Logo</h1>
+            <p>You know someone whom we all could be jealous of? A newborn baby. Why, you may ask. Every newborn child is a clean slate. No problems, no mistakes, no regrets. But once they start growing up, the clean slate becomes marred with the permanent marks of failure, setbacks, and disappointment. But like it's said, every cloud has a silver lining. Every once in a while, as circumstances change, life provides us with a new slate, a new opportunity to learn from our previous mistakes and then make more mistakes. We fall, we overcome. So continues the cycle of life, making us wiser and more experienced, slate by slate.</p></strong></span>
+          </div>
+          </section>
+          <section class="spotlight" style="background-image: url();background-color: white;color: black;">
+            <div class="marvel-device iphone-x haha" style="margin-bottom:2em;">
+    <div class="notch">
+        <div class="camera"></div>
+        <div class="speaker"></div>
+    </div>
+    <div class="top-bar"></div>
+    <div class="sleep"></div>
+    <div class="bottom-bar"></div>
+    <div class="volume"></div>
+    <div class="overflow">
+        <div class="shadow shadow--tr"></div>
+        <div class="shadow shadow--tl"></div>
+        <div class="shadow shadow--br"></div>
+        <div class="shadow shadow--bl"></div>
+    </div>
+    <div class="inner-shadow"></div>
+    <div class="screen" id="iphone">
+      <video autoplay muted controls controlslist="nofullscreen" disablepictureinpicture disableremoteplayback loop id="myVideo" width="100%" height="100%">
+            <source src="images/theme_reveal.mp4" type="video/mp4">
+            </video>
+    </div>
+</div>
+            <div class="content themestuff" style="padding: 3em 5em 7em 0em" id="TedX">
+
+                <strong><span style=color:white>
+                  <div class="spacingfix">
+        <h1 class="roast">Theme</h1>
+        <p class="hideonphone">Changing Currents conceptualizes the unpredictability of life. It doesn't sympathize with how carefully we've planned, how hard we've struggled, or how deeply we care, we will forever be objects of its tide. The past few years allowed us to experience this immutable reality at its probable worst. But, they've also been beautifully, almost divinely inspirational. In the direst of circumstances, we chose to bolster every aspect of the human condition.<br>
+<br>Entrenched dogmas radically reinvented, trillions of dollars spent in infrastructure bills and climate conservation efforts, oppressive policies wiped out across the world, politically significant outrage mobilized against structural barriers. The world is evolving the currents that run the deepest, and so are we. In our quest to foster meaningful innovation, we present to you an event like none before, to make those currents change, change for the better.</p>
+
+        <p class='hideonpc'>Changing Currents conceptualizes the unpredictability of life. It doesn't sympathize with how carefully we've planned, how hard we've struggled, or how deeply we care, we will forever be objects of its tide. The past few years allowed us to experience this immutable reality at its probable worst. But, they've also been beautifully, almost divinely inspirational. In the direst of circumstances, we chose to bolster every aspect of the human condition.</p>
+<img class="hehe" src="images/Text.gif" style="width: 100vw">
+<p class='hideonpc'>Entrenched dogmas radically reinvented, trillions of dollars spent in infrastructure bills and climate conservation efforts, oppressive policies wiped out across the world, politically significant outrage mobilized against structural barriers. The world is evolving the currents that run the deepest, and so are we. In our quest to foster meaningful innovation, we present to you an event like none before, to make those currents change, change for the better.</p></strong></span>
+
+
+            </div>
+
+            </div>
+          </section>
+        </section>
+    <div id="fullpage">
+      <div class="section fp-auto-height" id="section0">
+        <div class="slide" id="slide1.1">
+          <div class="hideonphone">
+                <div class="heading fix2" id="intro1"style="padding-bottom:0; height:66vh; z-index:0" loading="lazy">MEET<br>THE<br>SPEAKERS</div>
+              </div>
+          <div class="hideonpc">
+                <div class="heading fix1" id="intro2"style="padding-bottom:0; height: 60vh; z-index:0" loading="lazy">MEET<br>THE<br>SPEAKERS</div>
+              </div>
+        </div>
+        <div class="slide" id="slide1.2">
+          <img class = "imgleft hideonpc" src="images/Speakers/[L] Janhvi.jpg" id="img1">
+          <img class = "imgleft hideonphone" src="images/Speakers/Janhvi.jpg" id="img2">
+          <div class="contright"><h1 class="roast">A is for Arrow</h1>Janhvi is the Director of Innovation at Education Above All. Her passion lies in designing solutions that advance quality learning solutions for the world's most marginalized. In her previous roles in the Ministry of Education and Qatar Foundation, she was responsible for conceiving multiple creative solutions including Teach for Qatar, a national literacy and numeracy program, an innovative future school and interdisciplinary impact models for the university ecosystem. She is a graduate of the Harvard Graduate School of Education and the University of Pennsylvania.
+<div style="margin-top:1em;">
+            <ul class="icons">
+                <li><a href="https://www.instagram.com/jmk1986/" class="icon brands circle fa-instagram" target="_blank"><span class="label">Instagram</span></a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/janhvi-maheshwari-kanoria-bbb08816" class="icon brands circle fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+
+            </ul>
+          </div>
+          </div>
+        </div>
+        <div class="slide" id="slide1.3">
+          <img class = "imgleft hideonpc" src="images/Speakers/[L] MAQ.jpg">
+          <img class = "imgleft hideonphone" src="images/Speakers/MAQ.jpg">
+          <div class="contright"><h1 class="roast">Age is just a number</h1>Mohammed Al-Qassabi is an Information Systems Senior at Carnegie Mellon University Qatar and the head of Robotics and Al department at Qatar Scientific Club. He developed OPAS, which is an innovative system that helps referees in detecting offside players during football matches, analyze players performance, and injuries in case they happen. Recently, Al-Qassabi won the 3rd best Arab inventor in Stars of Science 13 and the 5th best inventor in the world in the CIF 2021.
+<div style="margin-top:1em;">
+            <ul class="icons">
+              <li><a href="https://twitter.com/maq_41?s=21" class="icon brands circle fa-twitter" target="_blank"><span class="label">Twitter</span></a>
+              </li>
+                <li><a href="https://www.instagram.com/maq.41/" class="icon brands circle fa-instagram" target="_blank"><span class="label">Instagram</span></a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/mohammed-al-qassabi-65571621a" class="icon brands circle fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+
+            </ul>
+          </div>
+          </div>
+        </div>
+        <div class="slide" id="slide1.4">
+          <img class = "imgleft hideonpc" src="images/Speakers/[L] Dana.jpg">
+          <img class = "imgleft hideonphone" src="images/Speakers/Dana.jpg">
+          <div class="contright"><h1 class="roast">Why We Can Never Stay Happy... or Sad</h1>Dana is an MSc educated Business Development and Marketing Professional with a Joint BSc in Psychology & Health Science.
+She has extensive experience in the healthcare and education sector, and an impeccable track record of achievements in digital communications, marketing and project management. Her passion lies in meeting stakeholder objectives whilst building team morale, encouraging collaboration and creating a positive and productive workplace environment.
+<div style="margin-top:1em;">
+            <ul class="icons">
+                <li><a href="https://www.instagram.com/danaisbananas/" class="icon brands circle fa-instagram" target="_blank"><span class="label">Instagram</span></a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/danahabayeb" class="icon brands circle fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+
+            </ul>
+          </div>
+          </div>
+        </div>
+        <div class="slide" id="slide1.4">
+          <img class = "imgleft hideonpc" src="images/Speakers/[L] Neeshad.jpg">
+          <img class = "imgleft hideonphone" src="images/Speakers/Neeshad.jpg">
+          <div class="contright"><h1 class="roast">Climate Action: Time for Arab Youth to Lead</h1>Neeshad is an Environmentalist, and policy-oriented social change advocate, best known for his work on youth climate movement, environmental and climate policies in the Middle East. He holds a master's degree in Environmental Engineering and is based in Doha, Qatar.
+In March 2019, he was named in the Apolitical's List of the 100 Most Influential People in Climate Policy 2019. Neeshad is currently the Co-founder & Executive Director at the Arab Youth Climate Movement Qatar, a first registered youth lead non-profit association in the State of Qatar.
+<div style="margin-top:1em;">
+            <ul class="icons">
+              <li><a href="https://twitter.com/ineeshadvs?s=21" class="icon brands circle fa-twitter" target="_blank"><span class="label">Twitter</span></a>
+              </li>
+                <li><a href="https://www.instagram.com/neeshad/" class="icon brands circle fa-instagram" target="_blank"><span class="label">Instagram</span></a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/neeshadvs" class="icon brands circle fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+
+            </ul>
+          </div>
+          </div>
+        </div>
+        <div class="slide" id="slide1.4">
+          <img class = "imgleft hideonpc" src="images/Speakers/[L] Avinav.jpg">
+          <img class = "imgleft hideonphone" src="images/Speakers/Avinav.jpg">
+          <div class="contright"><h1 class="roast">Existentialism of Arts</h1>Avinav Mukherjee is a trained Indian classical dancer based in Delhi. He had an extensive training under the renowned Kathak exponent Guru Smt.Geetaniali Lal for 14 long years.
+Avinav is a graded doordarshan artist and recipient of various scholarships from C.C.R.T, Sahitya Kala Parishad, Kathak Kendra etc. With numerous performances in prestigious events like Common wealth games 2010, London Olympics 2012, Republic Day Celebration in Morocco 2017, ASEAN Meet Singapore 2018 etc he has also been conferred with various awards.
+            <div style="margin-top:1em;">
+            <ul class="icons">
+              <li><a href="https://twitter.com/avinavdanseur?s=21" class="icon brands circle fa-twitter" target="_blank"><span class="label">Twitter</span></a>
+              </li>
+                <li><a href="https://www.instagram.com/avinavmukharji/" class="icon brands circle fa-instagram" target="_blank"><span class="label">Instagram</span></a>
+                </li>
+
+            </ul>
+          </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Main -->
+
+<div class = "shoe">
+  <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <div class="sat1">
+            <h4>Find Us</h4>
+            <ul style="list-style: none;padding-left: 0;">
+              <li style="padding-left: 0;"><a href="https://twitter.com/TEDxYouthDPSMIS" style="color:white;" target="_blank">Twitter</a></li>
+              <br>
+              <li style="padding-left: 0;"><a href="https://www.linkedin.com/company/tedxyouth-dpsmis" style="color:white;" target="_blank">Linkedin</a></li><br>
+              <li style="padding-left: 0;"><a href="https://www.facebook.com/TEDxYouthDPSMIS/" style="color:white;" target="_blank">Facebook</a></li><br>
+              <li style="padding-left: 0;"><a href="https://www.youtube.com/channel/UCzqssOrrtI0o6M0lNYtvPMA" style="color:white;" target="_blank">Youtube</a></li><br>
+              <li style="padding-left: 0;"><a href="https://www.instagram.com/tedxyouthdps/" style="color:white;" target="_blank">Instagram</a></li><br>
+              <li style="padding-left: 0;"><a href="https://www.ted.com/tedx/events/48468" style="color:white;" target="_blank">TEDx Event</a></li>
+
+            </ul>
+          </div>
+          <div class="sat2">
+            <h4>Sitemap</h4>
+            <ul style="list-style: none;padding-left: 0;">
+              <li style="padding-left: 0;"><a href="index.html" style="color:white;">Home</a></li><br>
+              <li style="padding-left: 0;"><a href="Our Event.html" style="color:white;">Our Event</a></li><br>
+              <li style="padding-left: 0;"><a href="About Us.html" style="color:white;">About us</a></li><br>
+              <li style="padding-left: 0;"><a href="Legacy.html" style="color:white;">Legacy</a></li>
+              <br>
+              <br>
+              <br>
+              <br>
+
+            </ul>
+          </div>
+          <div class="sat3">
+            <h4>Forms</h4>
+            <ul style="list-style: none;padding-left: 0;">
+              <li style="padding-left: 0;"><a href="https://forms.gle/diw2VHR2FpWCBKNh9" style="color:white;">Speaker</a></li><br>
+              <li style="padding-left: 0;"><a href="https://forms.gle/9xFRbFbGHNoqmGNX9" target="_blank" style="color:white;">Volunteers</a></li><br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-center">
+          <div class="disa">
+          <h4>About DPS-MIS</h4>
+          <p>Established in 2001, DPS-MIS has carved a niche for itself
+  and is counted among the best schools in Doha. Bettering
+  the best in Academics, Extra-curricular activities and sports,
+  the school has succeeded in bringing out well-rounded
+  personalities.</p>
+        </div>
+        </div>
+        <div class="footer-right">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6364.104056663215!2d51.603638925643615!3d25.17628233087317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45cb8640d5a8ed%3A0xa73f3e23ca421cdc!2sDPS-Modern%20Indian%20School!5e0!3m2!1sen!2sus!4v1634226169102!5m2!1sen!2sus" width="250" height="200" style="border:0;border-radius: 12px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </footer>
+      <div class="punch">
+      <div class="yat1" style="padding-top: 1em;padding-bottom: 1em;">
+      <img src="images/[TEDx] WHITETEXT.png" height="30vh">
+    </div>
+      <div class="yat2" style="color: white;">
+        <p class="fixfooter">This independent TEDx event is operated under license from TED</p>
+      </div>
+    </div>
+  </div> <!-- footer end -->
+</div>
+
+
+<script type="text/javascript" src="assets/js/fullpage.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+      sectionsColor: ['#f8f8f8'],
+      resize: false,
+      animateAnchor:false,
+      scrollOverflow: true,
+      autoScrolling:false,
+      fitSection: false,
+      slidesNavigation:true,
+      navigation:true,
+      css3: true,
+      fitToSection: false
+    });
+</script>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_Fk8sb2YT0iiiGWsrbvco4');
+        })();
+
+</script>
+
+<!-- Plugin CSS -->
+<link type="text/css" href="assets/css/OverlayScrollbars.css" rel="stylesheet"/>
+<!-- Plugin JS -->
+<script type="text/javascript" src="assets/js/OverlayScrollbars.js"></script>
+
+<script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('myForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('in_touch', 'in_touch', this)
+                    .then(function() {
+                        location.replace("thank_you.html")
+                    }, function(error) {
+                        alert("There was an error. If error persists email tedxdpsmis@gmail.com for assistance")
+                    });
+            });
+        }
+
+</script>
+
+<script type="text/javascript">
+
+    	var countre = 1
+
+    	function sleep(milliseconds) {
+  		const date = Date.now();
+  		let currentDate = null;
+  		do {
+    		currentDate = Date.now();
+  		} while (currentDate - date < milliseconds);
+		}
+
+        function changetext1(text)
+        {
+        	sleep(200)
+            var display = document.getElementById('satyam');
+            display.innerHTML = "";
+            display.innerHTML = text;
+            var display1 = document.getElementById('p1');
+            display1.innerHTML = "";
+            display1.innerHTML = "Quite frankly, almost all individuals have had their share of unique incidents and paths in life. Each person has dealt with pressing situations in a different way or solved a challenge in another way.  Of these, some stories and experiences are truly worth sharing because of the extent to which it may benefit others and give them a sense of direction. At TedxYouth@DPSMIS, we plan to do just this.";
+            var display2 = document.getElementById('p2');
+            display2.innerHTML = "";
+            display2.innerHTML = "The speeches given at a TED event have the power to transform the lives of the listener. As a speaker, you possess the power to turn a personal experience relatable to the ordinary. You do not have to be an expert in life advice or the ways of the world. Rather, a compelling story and personal experience presented in your own way are what inspire thousands. TedxYouth@DPSMIS aims at hosting local individuals to share their perspectives and stories so that we advance the many voices of our community and inspire others.";
+           }
+
+           function changetext3(text)
+        	{
+        	sleep(200)
+            var display = document.getElementById('satyam');
+            display.innerHTML = "";
+            display.innerHTML = text;
+            var display1 = document.getElementById('p1');
+            display1.innerHTML = "";
+            display1.innerHTML = "It is without a doubt that being a part of a TED event is always a wholesome and enlightening experience however, we believe that TedxYouth@DPSMIS is also an excellent opportunity for current students to get acquainted with the structure and organization of an official event. As a volunteer, the principal objectives are  to support the executives of the event in your respected field and administer a true standard of hospitality for the participants in attendance. In the process, students gain valuable insight into the preparation and flow of operations of a speaker-based event like TEDx.";
+            var display2 = document.getElementById('p2');
+            display2.innerHTML = "";
+            display2.innerHTML = "We believe that being a part of an initiative ‘behind the scenes’ will also sharpen a plethora of life skills such as communication, teamwork, time management and persuasion. Moreover, TEDx is the perfect place for students to explore their capabilities and hone skills in the fields of event management, marketing, design, IT, Finance and more! It enables you as a student to obtain a different perspective of the speakers’ talks and ideas too!";
+            }
+            function changetext2(text)
+        	{
+        	sleep(200)
+            var display = document.getElementById('satyam');
+            display.innerHTML = "";
+            display.innerHTML = text;
+            var display1 = document.getElementById('p1');
+            display1.innerHTML = "";
+            display1.innerHTML = "At TedxYouth@DPSMIS, the participants are truly the heart of the event. As an individual, we always strive to grow in life to make a better future for ourselves and others. The most valuable tool a person can have with him is experience. We gather this crucial experience by making mistakes and learning from them. At this event, we bring together a group of highly experienced individuals who recount incidents to teach us priceless lessons to ensure that we can also learn from their experiences and grow as human beings.";
+            var display2 = document.getElementById('p2');
+            display2.innerHTML = "";
+            display2.innerHTML = "Being a participant at this event ensures that you leave with a pot of wisdom and some food for thought which will spark conversation about crucial topics that aren’t generally entertained in everyday life.  After all, real-life experiences are the greatest teacher one can have, and we guarantee that you will learn a plethora of life lessons that will help you in the time to come.";
+            }
+
+            function setText1()
+            {
+            	countre = 1
+            }
+            function setText2()
+            {
+            	countre = 3
+            }
+            function setText3()
+            {
+            	countre = 2
+            }
+
+            function defaultText()
+            {
+            	if (countre === 1){
+            		changetext1('As a Speaker')
+            	}else if (countre === 2){
+            		changetext2('As a Participant')
+            	}else{
+            		changetext3('As a Volunteer')
+            	}
+            }
+
+
+
+</script>
+
+<script type="text/javascript">
+    document.documentElement.onload = function(){
+                document.getElementById("loader").style.display = "block";
+    };
+
+    window.onload = function(){
+        document.getElementById("loader").style.display = "none";
+    };
+
+</script>
+<script>
+var b1 = document.getElementById("satbutton");
+
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    b1.addEventListener('click',function(){
+      document.getElementById("satinthesat").style.width = "300px";
+    })
+    function contactUs(){
+      document.getElementById("satinthesat").style.width = "300px";
+    }
+  } else {
+    b1.addEventListener('click',function(){
+      document.getElementById("satinthesat").style.width = "400px";
+    })
+    function contactUs(){
+      document.getElementById("satinthesat").style.width = "400px";
+    }
+  }
+}
+
+var x = window.matchMedia("(max-width: 420px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+
+
+
+if (x.matches){
+
+}else{
+
+}
+
+
+
+function mini(){
+	document.getElementById("satinthesat").style.width = "0px";
+}
+
+
+
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "100px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+
+</script>
+
+<script type="text/javascript">
+  const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const square = entry.target.querySelector('.roast');
+
+    if (entry.isIntersecting) {
+      square.classList.add('fadl');
+    return; // if we added the class, exit the function
+    }
+
+    // We're not intersecting, so remove the class!
+    square.classList.remove('fadl');
+  });
+});
+
+observer.observe(document.querySelector('.roast'));
+</script>
+
+</body>
+</html>

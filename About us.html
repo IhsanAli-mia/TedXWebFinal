@@ -1,0 +1,484 @@
+<!DOCTYPE HTML>
+<!--
+  Very cool website for TEDx 2021
+  It is cool because we made it
+ -->
+<html>
+<head>
+  <title>About Us</title>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Organization",
+    "url": "http://www.tedxyouthdpsmis.com/",
+    "logo": "http://testing.tedxyouthdpsmis.com/images/TEDeX.png"
+  }
+  </script>
+
+   <meta charset="utf-8"/>
+  <link rel="shortcut icon" type="image/png" href="images/TEDeX.png"/>
+  <meta content="TEDxYouth@DPSMIS | Official website" property="og:title"/>
+  <meta content="The official website for TEDxYouth@DPSMIS Doha" property="og:description"/>
+  <meta name="title" content="TEDxYouth@DPSMIS | Official website">
+  <meta name="description" content="The official website for TEDxYouth@DPSMIS Doha 2021">
+  <meta content="http://www.tedxyouthdpsmis.com/" property="og:url"/>
+  <meta content="http://testing.tedxyouthdpsmis.com/images/TEDeX.png" property="og:image"/>
+  <meta content="#E62B1E" data-react-helmet="true" name="theme-color"/>
+  <meta name="keywords" content="tedx, dps mis, tedxyouth, qatar, dpsmis">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+
+  <style>
+  /* Phone stuff */
+  @media screen and (max-width: 980px) {
+    #footer{
+      display: none !important;
+    }
+    .hideonphone{
+      display:none !important;
+    }
+    .hideonpc{
+      display:block;
+    }
+    .hamburger{
+      display:flex;
+      position:fixed;
+      bottom:0;
+      justify-content: center;
+      width:100vw;
+    }
+    .fp-controlArrow.fp-prev{
+      left: 10px !important;
+    }
+    .fp-controlArrow.fp-next{
+      right: 10px !important;
+    }
+    .hideonp{
+      display: flex !important;
+    }
+    .boxb{
+      display:none !important;
+    }
+
+
+
+
+    .slide img{
+      top:50%;
+      padding: 0.75em !important;
+      width: min(100vw, 75vh) !important;
+    }
+  }
+
+  #navbutton{
+    width: 50px !important;
+  }
+  #navbutton .toggle{
+    width: 50px !important;
+  }
+
+  .hideonphone{
+    display:block;
+  }
+
+  .hideonp{
+    display: none;
+  }
+
+  .hamburger{
+    display:none;
+  }
+
+  .buns{
+    height: 50px;
+    width: 100px;
+    border-radius: 150px 150px 0 0;
+    background: #E62B1E;
+    border-color: transparent !important;
+    animation: none;
+    background-image: url(images/people.png) !important;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    z-index: 10;
+    -moz-box-shadow: 0px 1px 5px 0px #676767;
+-webkit-box-shadow: 0px 1px 5px 0px #676767;
+box-shadow: 0px 1px 5px 0px #676767
+  }
+
+  .buns:hover{
+    border-radius: 150px 150px 0 0;
+    background: #E62B1E;
+    border-color: transparent !important;
+    animation: none;
+    background-image: url(images/people.png) !important;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    z-index: 10;
+  }
+
+  .boxb{
+      display: flex;
+      list-style: none;
+      padding-left: 0;
+      width: 100% ;
+      font-size: 0;
+      padding-right: 0;
+      right: 0;
+      padding-inline-start: 0px;
+      margin-block-start:0px;
+      margin-block-end:0px;
+      text-align: left;
+      justify-content: center;
+    }
+
+    .boxb li{
+      display:inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 11.07vw;
+      font-size: min(17px, 1.1vw);
+      right:0;
+      white-space: nowrap;
+      left: 0;
+      text-align: center;
+      height:5vh;
+      font-family: hlosat !important;
+      border: transparent;
+      padding-left: 0;
+    }
+
+    .fix{
+      width: 11.25vw !important;
+      margin-left: -1px;
+      margin-right:-1px;
+    }
+
+
+  .section{
+    text-align:center;
+  }
+
+  .fp-tableCell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .fp-controlArrow.fp-prev {
+    left: 50px;
+    border-color: transparent #333333 transparent transparent;
+  }
+  .fp-controlArrow.fp-next{
+    right: 50px;
+    border-color: transparent transparent transparent #333333;
+  }
+
+  .fp-controlArrow.fp-prev {
+    left: 50px;
+    height: 39px;
+    width:34px;
+    background-image: url("images/[L] black_button - Copy.png");
+    background-size: contain;
+    border-color: transparent;
+    border-width:0px;
+  }
+
+
+  .fp-controlArrow.fp-next     {
+    right: 50px;
+    height: 39px;
+    width:34px;
+    border-color: transparent;
+    border-width:0px;
+  }
+
+  .fp-controlArrow.fp-next{
+    background-image: url("images/[L] black_button.png");
+    background-size: cover;
+  }
+
+  .slide h1{
+    font-size: 3em;
+    display: block;
+    width: 100%;
+  }
+
+  .slide.other img{
+    top:50%;
+    padding: 1.5em;
+    width: min(75vw, 90vh);
+  }
+
+  .fp-slidesNav.fp-bottom{
+    bottom: 50px;
+  }
+
+  .phonemenu{
+    color: white;
+    width: 70vw;
+    font-size: 1.5em;
+    border:none;
+  }
+
+  #fp-nav{
+    opacity: 0;
+  }
+
+  #footer{
+    display: inline-block;
+    bottom:0px;
+    position:fixed;
+    height: 5vh;
+    width: 100%;
+    z-index:9;
+    text-align:left;
+    color: #f2f2f2;
+    padding: 0 0 0 0;
+  }
+
+
+  .satinthesa{
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+inset: 0px 0px 0px auto;
+top:auto;
+border-radius: 20px !important;
+right: 5%;
+width: 0%;
+height: 100vh;
+z-index: 1;
+bottom:100px;
+
+
+will-change: transform, opacity;
+backface-visibility: hidden;
+  }
+
+  .satorga{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    font-size: min(0.875rem, 4vw, 2vh);
+    white-space: nowrap;
+    overflow: auto;
+    text-overflow: ellipsis;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 9999999;
+    -moz-transition: all 0.2s ease-in-out;
+			-webkit-transition: all 0.2s ease-in-out;
+			-ms-transition: all 0.2s ease-in-out;
+			transition: all 0.2s ease-in-out;
+}
+
+    .satorga ul{
+      padding:0;
+    }
+
+    .satorga ul li{
+      padding-top: 1vh;
+    }
+  }
+  </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FVXE2EYNDR"></script>
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FVXE2EYNDR');
+</script>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css"/>
+    </noscript>
+
+</head>
+<body class="index is-preload">
+
+
+
+<div id="loader"></div>
+<div id="page-wrapper">
+<div id="footer" style="display:inline-block;">
+  <ul class="boxb">
+      <a href="#Group" style="text-decoration: inherit; color: inherit;"><li style="background: #ed6573;color: white; ">GROUP</li></a>
+      <a href="#Group/1" style="text-decoration: inherit; color: inherit;"><li class="fix"style="background-color: #ed8c79">LEADS</li></a>
+      <a href="#Group/2" style="text-decoration: inherit; color: inherit;"><li class="fix"style="background-color: #f6bf86">PRODUCTION</li></a>
+      <a href="#Group/3" style="text-decoration: inherit; color: inherit;"><li class="fix"style="background-color: #c893cb">COMMERCE</li></a>
+      <a href="#Group/4" style="text-decoration: inherit; color: inherit;"><li class="fix"style="background-color: #eea6bc">LOGISTICS</li></a>
+      <a href="#Group/5" style="text-decoration: inherit; color: inherit;"><li class="fix"style="background-color: #dfbadb">CURATION</li></a>
+      <a href="#Group/6" style="text-decoration: inherit; color: inherit;"><li class="fix"style="background-color: #5ac6c6">GRAPHIC DESIGN</li></a>
+      <a href="#Group/7" style="text-decoration: inherit; color: inherit;"><li class="fix"style="background-color: #8fd0ca">VISUAL DESIGN</li></a>
+      <a href="#Group/8" style="text-decoration: inherit; color: inherit;"><li style="background-color: #a0ddde">INFOTECH</li></a>
+</ul>
+</div>
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1 id="logo"><a href="index.html"><img src="images/[TEDx] BLACK TEXT.png" height="25vh"></a></h1>
+        <nav id="nav">
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li class="submenu">
+                    <a href="#">Register</a>
+                    <ul>
+                        <li><a href="https://forms.gle/9xFRbFbGHNoqmGNX9" target="_blank">Volunteer</a></li>
+                        <li><a href="https://forms.gle/diw2VHR2FpWCBKNh9" target="_blank">Speaker</a></li>
+                    </ul>
+                </li>
+                <li class="current"><a href="Our Event.html">Our Event</a></li>
+                <li class="current"><a href="About Us.html">About Us</a></li>
+                <li class="current"><a href="Legacy.html">Legacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div id="fullpage">
+      <div class="section" id="section0">
+        <div class="slide" id="slide1.1">
+          <img class = "hideonphone" src="images/Team/Group.jpg" style="max-width:100vw; margin:auto; max-height:90vh">
+          <div class="hideonpc">
+                <div class="heading">OUR<br>TEAM</div>
+              </div>
+
+        </div>
+        <div class="slide other" id="slide1.2"><h1><img src="images/Team/[L] Leads.jpg"></h1></div>
+        <div class="slide other" id="slide1.3"><h1><img src="images/Team/[L] Production.jpg"></h1></div>
+        <div class="slide other" id="slide1.4"><h1><img src="images/Team/[L] Commerce.jpg"></h1></div>
+        <div class="slide other" id="slide1.5"><h1><img src="images/Team/[L] Logistics.jpg"></h1></div>
+        <div class="slide other" id="slide1.6"><h1><img src="images/Team/[L] Curation.jpg"></h1></div>
+        <div class="slide other" id="slide1.7"><h1><img src="images/Team/[L] GD.jpg"></h1></div>
+        <div class="slide other" id="slide1.8"><h1><img src="images/Team/[L] VD.jpg"></h1></div>
+        <div class="slide other" id="slide1.9"><h1><img src="images/Team/[L] Infotech.jpg" title="Yes we switched our name cards in the group picture"></h1></div>
+        </div>
+    </div>
+<div class="hamburger hideonpc hideonp">
+    <button style="cursor: pointer;" href="#" class="buns" id="satbutton">
+    </button>
+
+</div>
+
+            <div class="satorga" id="satorga" onclick="mini()">
+              <ul style="list-style: none;">
+                <li><a href="#Group/1" class="button phonemenu" onclick="mini()" style="background-color: #ed8c79;">LEADS</a></li>
+                <li><a href="#Group/2" onclick="mini()" class="button phonemenu" style="background-color: #f6bf86;">PRODUCTION</a></li>
+                <li ><a href="#Group/3" onclick="mini()" class="button phonemenu" style="background-color: #c893cb;">COMMERCE</a></li>
+                <li ><a href="#Group/4" onclick="mini()" class="button phonemenu" style="background-color: #eea6bc;">LOGISTICS</a></li>
+                <li ><a href="#Group/5" onclick="mini()" class="button phonemenu" style="background-color: #dfbadb;">CURATION</a></li>
+                <li ><a href="#Group/6" onclick="mini()" class="button phonemenu" style="background-color: #5ac6c6;">GRAPHIC DESIGN</a></li>
+                <li ><a href="#Group/7" onclick="mini()" class="button phonemenu" style="background-color: #8fd0ca;">VISUAL DESIGN</a></li>
+                <li ><a href="#Group/8" onclick="mini()" class="button phonemenu" style="background-color: #a0ddde;">INFOTECH</a></li>
+              </ul>
+            </div>
+
+
+
+    <script type="text/javascript" src="assets/js/fullpage.js"></script>
+    <script type="text/javascript">
+        var myFullpage = new fullpage('#fullpage', {
+          sectionsColor: ['#f8f8f8', '#f8f8f8', '#f8f8f8', '#f8f8f8'],
+          anchors: ['Group', 'Img1', 'Img2', 'Img3'],
+          setScrollingSpeed: 1000,
+          resize: false,
+          animateAnchor:false,
+          scrollOverflow: true,
+          autoScrolling:true,
+          fitSection: false,
+          slidesNavigation:true,
+          navigation:true,
+          continuousVertical:true,
+          css3: true
+        });
+    </script>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.dropotron.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_Fk8sb2YT0iiiGWsrbvco4');
+        })();
+
+</script>
+
+<!-- Plugin CSS -->
+<link type="text/css" href="assets/css/OverlayScrollbars.css" rel="stylesheet"/>
+<!-- Plugin JS -->
+<script type="text/javascript" src="assets/js/OverlayScrollbars.js"></script>
+
+
+
+<script type="text/javascript">
+    document.documentElement.onload = function(){
+                document.getElementById("loader").style.display = "block";
+    };
+
+    window.onload = function(){
+        document.getElementById("loader").style.display = "none";
+    };
+
+</script>
+<script>
+var b1 = document.getElementById("satbutton");
+
+
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    b1.addEventListener('click',function(){
+      document.getElementById("satorga").style.top = "0%";
+    })
+    function contactUs(){
+      document.getElementById("satorga").style.top = "0";
+    }
+  } else {
+    b1.addEventListener('click',function(){
+      document.getElementById("satorga").style.top = "0";
+    })
+    function contactUs(){
+      document.getElementById("satorga").style.top = "0";
+    }
+  }
+}
+
+var x = window.matchMedia("(max-width: 420px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+
+
+
+
+function mini(){
+  document.getElementById("satorga").style.top = "-100%";
+}
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

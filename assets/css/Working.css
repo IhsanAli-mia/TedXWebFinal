@@ -1,0 +1,201 @@
+
+boots{
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-height:800px){
+  boots { position: static; }
+  header { padding-top:40px; }
+}
+
+
+.boots-distributed{
+  background-color: white;
+  box-sizing: border-box;
+  width: 100%;
+  height: 25%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 50px 0px 60px 50px;
+}
+
+.boots-distributed .boots-left,
+.boots-distributed .boots-center,
+.boots-distributed .boots-right{
+  display: inline-block;
+  padding: 0;
+  vertical-align: top;
+}
+
+/* boots left */
+
+
+
+.boots-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Cookie', cursive;
+  margin: 0;
+}
+
+/* The company logo */
+
+.boots-distributed .boots-left img{
+  width: 30%;
+  margin: 0;
+  padding: 0;
+}
+
+.boots-distributed h3 span{
+  color:  #e0ac1c;
+}
+
+
+/* boots links */
+
+.boots-distributed .boots-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+}
+
+.boots-distributed .boots-links a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.boots-distributed .boots-company-name{
+  color:  #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+@font-face {
+  font-family: byesat;
+  src: url("Roboto-Regular.ttf");
+}
+
+p{
+  font-family: byesat;
+  margin-top: 0px;
+}
+/* boots Center */
+
+.boots-distributed .boots-left,
+  .boots-distributed .boots-center,
+  .boots-distributed .boots-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .boots-distributed .boots-center i{
+    margin-left: 0;
+  }
+
+
+
+
+.boots-distributed .boots-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.boots-distributed .boots-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+
+
+/* boots Right */
+
+
+.boots-distributed .boots-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.boots-distributed .boots-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.boots-distributed .boots-icons{
+}
+
+.boots-distributed .boots-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 2px;
+  padding-right: 1em;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+}
+
+@media (max-width: 1040px){
+  .boots-distributed .boots-right{
+      width: 30%;
+  }
+  .boots-distributed .boots-right{
+      width: 30%;
+  }
+}
+
+
+@media screen and (max-width: 880px) {
+  .bg{
+    width: 60% !important;
+    right:18% !important;
+  }
+
+}
+
+@media screen and (max-width: 765px) {
+  .bg{
+    width: 69% !important;
+    right:18% !important;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .bg{
+    width: 75% !important;
+    right:11% !important;
+  }
+
+  .boots-distributed{
+    padding: 0 0 0 0;
+  }
+
+
+  .imig{
+    width: 30px !important;
+  }}
+
+
+}
